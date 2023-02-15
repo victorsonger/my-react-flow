@@ -1,5 +1,5 @@
-import React from 'react';
-import { getBezierPath } from 'reactflow';
+import React from "react";
+import { getBezierPath } from "reactflow";
 
 export default function CustomEdge({
   id,
@@ -23,7 +23,7 @@ export default function CustomEdge({
   });
 
   return (
-    <>
+    <div>
       <path
         id={id}
         style={style}
@@ -32,10 +32,15 @@ export default function CustomEdge({
         markerEnd={markerEnd}
       />
       <text>
-        <textPath href={`#${id}`} style={{ fontSize: 12 }} startOffset="50%" textAnchor="middle">
+        <textPath
+          href={`#${id}`}
+          style={{ fontSize: 12 }}
+          startOffset="50%"
+          textAnchor="middle"
+        >
           {data.text}
         </textPath>
       </text>
-    </>
+    </div>
   );
 }
